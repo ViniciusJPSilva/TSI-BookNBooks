@@ -2,6 +2,15 @@
 
 Python versão 3.11
 
+<br/>
+
+Criar um ambiente virtual:
+```py
+python3 -m venv venv
+```
+
+<br/>
+
 Instalar os pacotes python:
 ```py 
 pip install -r requirements.txt
