@@ -1,5 +1,7 @@
 # TSI-CombiningAPIs
 
+Python versão 3.11
+
 Instalar os pacotes python:
 ```py 
 pip install -r requirements.txt
