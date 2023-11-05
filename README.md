@@ -2,11 +2,20 @@
 
 Python versão 3.11
 
+Pip versão 23.3.1
+
 <br/>
 
 Criar um ambiente virtual:
 ```py
 python3 -m venv venv
+```
+
+<br/>
+
+Acessar o ambiente virtual (Powershell):
+```py
+.\venv\Scripts\Activate.ps1  
 ```
 
 <br/>
