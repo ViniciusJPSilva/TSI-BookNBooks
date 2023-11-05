@@ -153,3 +153,4 @@ cython_debug/
 
 # System config data
 config.py
+test.py
