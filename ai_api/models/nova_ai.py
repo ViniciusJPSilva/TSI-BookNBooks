@@ -1,6 +1,7 @@
 import openai
-from ai_api.models.utils import extract_titles
-from ai_api.config import API_BASE, API_KEY
+from models.utils import extract_titles
+from constants.constants import UTF_8
+from config import API_BASE, API_KEY
 from typing import List
 
 openai.api_key = API_KEY

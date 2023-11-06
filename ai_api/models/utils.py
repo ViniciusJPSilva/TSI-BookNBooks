@@ -1,3 +1,4 @@
+import json
 from typing import List
 
 def extract_titles(text: str) -> List[str]:
@@ -19,4 +20,3 @@ def extract_titles(text: str) -> List[str]:
                 titles.append(title)
 
     return titles
-
