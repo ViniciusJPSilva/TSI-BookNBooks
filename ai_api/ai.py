@@ -16,9 +16,11 @@ def home():
 @app.route("/ai/query/related-books/<title>")
 def related_books(title):
     if title.strip():
+        result = NovaAI.related_books_query(title)
+        print(result)
         return jsonify({
             "title": title,
-            "related": NovaAI.related_books_query(title),
+            "related": result,
             "status": 200
         }), 200
     else:
