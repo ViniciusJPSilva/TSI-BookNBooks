@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+:root {
+  --txt-font: "Quicksand", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--txt-font);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-top: 34px;
+  margin-top: 30px;
+}
+
+footer {
+  margin-top: 33px;
+  bottom: 0 !important;
+}
