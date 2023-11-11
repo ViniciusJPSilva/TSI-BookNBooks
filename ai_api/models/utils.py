@@ -6,9 +6,11 @@ END_FLAG = "__END__"
 
 def extract_titles(text: str) -> List[str]:
     """
-
+    Extrai títulos de um texto formatado como um dicionário JSON.
+    Esta função substitui os marcadores de início e fim definidos (START_FLAG, END_FLAG) para { e } respectivamente,
+    e em seguida, extrai as chaves do dicionário JSON contido no texto.
+    :param text: Uma string formatada como um dicionário JSON contendo títulos.
+    :return: Uma lista de títulos extraídos do texto.
     """
     text = text.replace(START_FLAG, "{").replace(END_FLAG, "}")
-    print(text)
-    titles = [key for key in json.loads(text)]
-    return titles
+    return [key for key in json.loads(text)]
