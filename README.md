@@ -4,6 +4,8 @@ Python versão 3.11
 
 Pip versão 23.3.1
 
+Node.js versão 20.9.0 LTS
+
 <br/>
 
 Criar um ambiente virtual:
