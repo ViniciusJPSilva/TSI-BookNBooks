@@ -27,8 +27,8 @@ pip install -r requirements.txt
 
 <br/>
 
-Criar um arquivo chamado config.py no diretório ai-api com o seguinte conteúdo:
+Criar um arquivo chamado config.py no diretório ai-api com o seguinte conteúdo (os nomes são fictícios):
 ```py
 API_KEY = 'SUA_CHAVE_DA_API'
-API_BASE = 'https://api.nova-oss.com/v1'
+API_BASE = 'https://sua.api.endpoint/'
 ```
