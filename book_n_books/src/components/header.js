@@ -5,8 +5,8 @@ export default function Header () {
             <div className="nav-wrapper orange darken-1">
                 <form action="#" >
                     <div className="input-field" >
-                        <input id="locale" type="search" required />
-                        <label className="label-icon" htmlFor="locale"><i className="material-icons">search</i></label>
+                        <input id="bookSearch" className="search-field" type="search" placeholder="Busque um livro..." required />
+                        <label className="label-icon" htmlFor="bookSearch"><i className="material-icons">search</i></label>
                         <i className="material-icons">close</i>
                     </div>
                 </form>
