@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PAGES from './constants/constants';
 import Header from './components/header';
 import Footer from './components/footer';
 import Welcome from './components/welcome';
+import Search from './components/search';
+import Book from './components/book';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(PAGES.HOME);
+
+  const renderContent = () => {
+    switch (currentPage) {
+      case PAGES.HOME:
+        return <Welcome setCurrentPage={setCurrentPage}/>;
+      case PAGES.SEARCH:
+        return <Search setCurrentPage={setCurrentPage}/>;
+      case PAGES.BOOK:
+        return <Book setCurrentPage={setCurrentPage}/>;
+      default:
+        return null;
+    };
+  };
+
   return (
     <div className="App">
-      <Header/>
-      <Welcome/>
+      <Header setCurrentPage={setCurrentPage}/>
+      {renderContent()}
       <Footer/>
     </div>
   );
