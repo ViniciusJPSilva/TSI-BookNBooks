@@ -22,29 +22,57 @@ Node.js versão 20.9.0 LTS
 
 <br/>
 
-Criar um ambiente virtual:
+<h3>API</h3>
+
+Uma API foi implementada para gerenciar as requisições à API do OpenAI, utilizando somente Python e um de seus frameworks, o Flask.
+<br/>
+
+É recomendado que seja criado um ambiente virtual para execução da API, conforme o comando abaixo:
 ```py
 python3 -m venv venv
 ```
 
 <br/>
 
-Acessar o ambiente virtual (Powershell):
+Acesse o ambiente virtual (Powershell):
 ```py
 .\venv\Scripts\Activate.ps1  
 ```
 
 <br/>
 
-Instalar os pacotes python:
+Instale os pacotes python:
 ```py 
 pip install -r requirements.txt
 ```
 
 <br/>
 
-Criar um arquivo chamado config.py no diretório ai-api com o seguinte conteúdo (os nomes são fictícios):
+Crie um arquivo chamado config.py no diretório ai-api com o seguinte conteúdo (os nomes são fictícios):
 ```py
 API_KEY = 'SUA_CHAVE_DA_API'
 API_BASE = 'https://sua.api.endpoint/'
+```
+
+<br/>
+
+Inicie a API (certifique-se de executar o comando dentro do diretório ai_api):
+```py 
+python ai.py
+```
+
+<br/>
+
+<h3>FrontEnd</h3>
+
+Foi utilizado React e Materialize CSS para a implementação da página web.
+
+Para acessar a página web é necessário instalar as dependencias utilizando o gerenciador de pacotes do Node.js (certifique-se de executar os comandos dentro do diretório book_n_books):
+```js
+npm install
+```
+
+Em seguida, inicie a aplicação:
+```js
+npm start
 ```
