@@ -8,13 +8,14 @@ import Book from './components/book';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(PAGES.HOME);
+  const [searchResult, setSearchResult] = useState('');
 
   const renderContent = () => {
     switch (currentPage) {
       case PAGES.HOME:
         return <Welcome setCurrentPage={setCurrentPage}/>;
       case PAGES.SEARCH:
-        return <Search setCurrentPage={setCurrentPage}/>;
+        return <Search setCurrentPage={setCurrentPage} searchResult={searchResult}/>;
       case PAGES.BOOK:
         return <Book setCurrentPage={setCurrentPage}/>;
       default:
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header setCurrentPage={setCurrentPage}/>
+      <Header setCurrentPage={setCurrentPage} setSearchResult={setSearchResult}/>
       {renderContent()}
       <Footer/>
     </div>
