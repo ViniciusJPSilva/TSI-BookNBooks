@@ -16,13 +16,12 @@ export default function Header({ setCurrentPage, setSearchResult }) {
 
       document.getElementById('bookSearch').blur();
 
-      // const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&langRestrict=pt-BR`);
-      const response_data = ""; //await response.data;
+      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&langRestrict=pt-BR`);
+      const response_data = await response.data;
 
       await new Promise((resolve) => setTimeout(resolve, 3200));
 
       setSearchResult(response_data);
-      console.log(response_data);
       // Após a conclusão da requisição, você pode redefinir o indicador de carregamento
       setLoading(false);
     } catch (error) {

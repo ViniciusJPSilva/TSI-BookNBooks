@@ -10,7 +10,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(PAGES.HOME);
   const [searchResult, setSearchResult] = useState('');
 
-  const renderContent = () => {
+  function renderContent() {
     switch (currentPage) {
       case PAGES.HOME:
         return <Welcome setCurrentPage={setCurrentPage}/>;

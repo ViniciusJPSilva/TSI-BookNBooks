@@ -63,8 +63,8 @@ h4 {
 }
 
 .load-modal {
-  height: 300px !important;
-  width: 300px !important;
+  height: 350px !important;
+  width: 350px !important;
   text-align: center;
   background-color: #ffffff00 !important;
 }
@@ -75,6 +75,10 @@ h4 {
 
 .h-90 {
   height: 90vh !important;
+}
+
+.h-320-px {
+  height: 320px !important;
 }
 
 .w-100-pc {
@@ -129,7 +133,7 @@ input::placeholder {
   width: 32px;
   height: 12px;
   position: relative;
-  margin: 100px 0 30px 70px;
+  margin: 100px 0 15px 85px;
   zoom: 1.5;
 }
 .book .inner {

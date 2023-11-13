@@ -18,7 +18,7 @@ export default function LoadingModal({ isOpen }) {
     // Retorna uma função para destruir a instância do modal quando o componente é desmontado
     return () => {
       if (modalInstance) {
-        modalInstance.destroy();
+        modalInstance.close();
       }
     };
   }, [isOpen]);
@@ -54,6 +54,7 @@ export default function LoadingModal({ isOpen }) {
           </ul>
         </div>
       </div>
+      <h3>Carregando...</h3>
     </div>
   );
 }

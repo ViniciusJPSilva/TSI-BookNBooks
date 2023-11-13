@@ -1,12 +1,9 @@
 import React from "react";
+import SearchResults from "./searchResults";
 
 export default function Search({ setCurrentPage, searchResult }) {
-  const renderContent = () => {
-    return <div>a</div>;
-  };
-
   return (
-    <section>
+    <main className="search-section section">
       <div className="container">
         <div className="row">
           <div className="col w-100-pc mt-20">
@@ -24,12 +21,8 @@ export default function Search({ setCurrentPage, searchResult }) {
             </nav>
           </div>
         </div>
-        <div className="row">
-          <div className="col w-100-pc mt-20">
-
-          </div>
-        </div>
+        <SearchResults data={searchResult}/>
       </div>
-    </section>
+    </main>
   );
 }
