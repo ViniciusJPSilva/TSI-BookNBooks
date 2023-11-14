@@ -1,5 +1,4 @@
-import Image from "./image";
-import Card from "./card";
+import SearchBook from "./searchBook";
 
 export default function SearchResults({ data }) {
   const sortedData = data.items.sort((a, b) => {
@@ -20,24 +19,15 @@ export default function SearchResults({ data }) {
   const components = sortedData.map((item, index) => {
     return (
       <div className="col s12" key={index}>
-        <div className="row">
-          <div className="col s4">
-            <Image
-              imagePath={
-                item.volumeInfo.imageLinks
-                  ? item.volumeInfo.imageLinks.thumbnail.replace(
-                      "zoom=1",
-                      "zoom=1"
-                    )
-                  : require("../assets/no_image.jpg")
-              }
-              width={250}
-            />
-          </div>
-          <div className="col s8">
-            <Card title={item.volumeInfo.title} content={item.volumeInfo.description}/>
-          </div>
-        </div>
+        <SearchBook
+          title={item.volumeInfo.title}
+          authors={item.volumeInfo.authors}
+          image={
+            item.volumeInfo.imageLinks
+              ? item.volumeInfo.imageLinks.thumbnail.replace("zoom=1", "zoom=1")
+              : require("../assets/no-image.png")
+          }
+        />
       </div>
     );
   });

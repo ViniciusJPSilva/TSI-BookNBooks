@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 :root {
   --txt-font: "Quicksand", sans-serif;
@@ -38,6 +39,11 @@ h4 {
 .logo-section,
 .helper-section {
   height: 100vh;
+}
+.logo-section,
+.helper-section,
+.search-section {
+  min-height: 100vh;
   background: var(--main-color) url("assets/logo-section-library-img.jpg")
     no-repeat center fixed;
   background-size: cover;
@@ -67,6 +73,65 @@ h4 {
   width: 350px !important;
   text-align: center;
   background-color: #ffffff00 !important;
+}
+
+.book-data:hover img {
+  transform: scale(1.1);
+}
+
+.book-data:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 5px #0000009c;
+}
+
+.book-data {
+  min-height: 20vh;
+  display: block;
+  width: 85% !important;
+  padding: 2% !important;
+  margin: 15px auto;
+  background-color: var(--main-color);
+}
+
+.book-data img {
+  box-shadow: 5px 5px 5px #0000009c;
+}
+
+.section-title {
+  font-family: "Anton", sans-serif;
+  color: var(--main-color);
+  text-shadow: 1px 1px 1px #0000009c;
+  font-size: 4em;
+}
+
+.breadcrumb-container {
+  padding: 0 !important;
+}
+
+.back-link {
+  color: var(--main-color);
+  font-size: 1.2em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.back-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.back-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .fc-orange {
@@ -99,6 +164,11 @@ h4 {
 
 .mr-10 {
   margin-right: 10px !important;
+}
+
+.mlr-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .no-border {
@@ -268,7 +338,8 @@ input::placeholder {
   4% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  13%, 54% {
+  13%,
+  54% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   63% {
@@ -279,7 +350,8 @@ input::placeholder {
   5.86% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  14.74%, 55.86% {
+  14.74%,
+  55.86% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   64.74% {
@@ -290,7 +362,8 @@ input::placeholder {
   7.72% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  16.48%, 57.72% {
+  16.48%,
+  57.72% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   66.48% {
@@ -301,7 +374,8 @@ input::placeholder {
   9.58% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  18.22%, 59.58% {
+  18.22%,
+  59.58% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   68.22% {
@@ -312,7 +386,8 @@ input::placeholder {
   11.44% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  19.96%, 61.44% {
+  19.96%,
+  61.44% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   69.96% {
@@ -323,7 +398,8 @@ input::placeholder {
   13.3% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  21.7%, 63.3% {
+  21.7%,
+  63.3% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   71.7% {
@@ -334,7 +410,8 @@ input::placeholder {
   15.16% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  23.44%, 65.16% {
+  23.44%,
+  65.16% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   73.44% {
@@ -345,7 +422,8 @@ input::placeholder {
   17.02% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  25.18%, 67.02% {
+  25.18%,
+  67.02% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   75.18% {
@@ -356,7 +434,8 @@ input::placeholder {
   18.88% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  26.92%, 68.88% {
+  26.92%,
+  68.88% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   76.92% {
@@ -367,7 +446,8 @@ input::placeholder {
   20.74% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  28.66%, 70.74% {
+  28.66%,
+  70.74% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   78.66% {
@@ -378,7 +458,8 @@ input::placeholder {
   22.6% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  30.4%, 72.6% {
+  30.4%,
+  72.6% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   80.4% {
@@ -389,7 +470,8 @@ input::placeholder {
   24.46% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  32.14%, 74.46% {
+  32.14%,
+  74.46% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   82.14% {
@@ -400,7 +482,8 @@ input::placeholder {
   26.32% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  33.88%, 76.32% {
+  33.88%,
+  76.32% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   83.88% {
@@ -411,7 +494,8 @@ input::placeholder {
   28.18% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  35.62%, 78.18% {
+  35.62%,
+  78.18% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   85.62% {
@@ -422,7 +506,8 @@ input::placeholder {
   30.04% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  37.36%, 80.04% {
+  37.36%,
+  80.04% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   87.36% {
@@ -433,7 +518,8 @@ input::placeholder {
   31.9% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  39.1%, 81.9% {
+  39.1%,
+  81.9% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   89.1% {
@@ -444,7 +530,8 @@ input::placeholder {
   33.76% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  40.84%, 83.76% {
+  40.84%,
+  83.76% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   90.84% {
@@ -455,7 +542,8 @@ input::placeholder {
   35.62% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  42.58%, 85.62% {
+  42.58%,
+  85.62% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   92.58% {
@@ -466,7 +554,8 @@ input::placeholder {
   37.48% {
     transform: rotateZ(0deg) translateX(-18px);
   }
-  44.32%, 87.48% {
+  44.32%,
+  87.48% {
     transform: rotateZ(180deg) translateX(-18px);
   }
   94.32% {
@@ -477,13 +566,16 @@ input::placeholder {
   4% {
     transform: rotateZ(90deg);
   }
-  10%, 40% {
+  10%,
+  40% {
     transform: rotateZ(0deg);
   }
-  46%, 54% {
+  46%,
+  54% {
     transform: rotateZ(90deg);
   }
-  60%, 90% {
+  60%,
+  90% {
     transform: rotateZ(0deg);
   }
   96% {
@@ -494,13 +586,16 @@ input::placeholder {
   4% {
     transform: rotateZ(-90deg);
   }
-  10%, 40% {
+  10%,
+  40% {
     transform: rotateZ(0deg);
   }
-  46%, 54% {
+  46%,
+  54% {
     transform: rotateZ(-90deg);
   }
-  60%, 90% {
+  60%,
+  90% {
     transform: rotateZ(0deg);
   }
   96% {
@@ -511,17 +606,21 @@ input::placeholder {
   4% {
     transform: rotateZ(-90deg);
   }
-  10%, 40% {
+  10%,
+  40% {
     transform: rotateZ(0deg);
     transform-origin: 2px 2px;
   }
-  40.01%, 59.99% {
+  40.01%,
+  59.99% {
     transform-origin: 30px 2px;
   }
-  46%, 54% {
+  46%,
+  54% {
     transform: rotateZ(90deg);
   }
-  60%, 90% {
+  60%,
+  90% {
     transform: rotateZ(0deg);
     transform-origin: 2px 2px;
   }
@@ -582,6 +681,22 @@ input::placeholder {
   }
 }
 
+@media (max-width: 768px) {
+  .book-data .img-data {
+    padding-top: 10px;
+    clear: both;
+    width: 100%;
+  }
+
+  .book-data .img-data img {
+    float: none !important;
+  }
+
+  .book-data .txt-data h3 {
+    font-size: 2em;
+  }
+}
+
 @media (max-width: 480px) {
   .custom-card {
     height: 400px;
@@ -590,6 +705,10 @@ input::placeholder {
 
   .helper-section {
     height: 180vh;
+  }
+
+  .section-title {
+    font-size: 3.5em;
   }
 }
 
