@@ -2,7 +2,7 @@ import React from "react";
 import SearchResults from "./searchResults";
 import Image from "./image";
 
-export default function Search({ setCurrentPage, searchResult }) {
+export default function Search({ setCurrentPage, setSelectedBook, searchResult }) {
   return (
     <main className="search-section section ">
       <div className="container yellow lighten-5">
@@ -29,13 +29,15 @@ export default function Search({ setCurrentPage, searchResult }) {
           </a>
         </div>
         {searchResult.totalItems >= 1 ? (
-          <SearchResults data={searchResult} />
+          <SearchResults setCurrentPage={setCurrentPage} setSelectedBook={setSelectedBook} data={searchResult} />
         ) : (
-          <div className="center-align row">
-            <Image
-              imagePath={require("../assets/not-found.png")}
-              width={500}
-            ></Image>
+          <div className="container valign-wrapper">
+            <div className="row logo-container white">
+              <Image
+                imagePath={require("../assets/not-found.png")}
+                width={500}
+              />
+            </div>
           </div>
         )}
       </div>

@@ -1,6 +1,10 @@
 import SearchBook from "./searchBook";
 
-export default function SearchResults({ data }) {
+export default function SearchResults({
+  setCurrentPage,
+  setSelectedBook,
+  data,
+}) {
   const sortedData = data.items.sort((a, b) => {
     // Se a tiver imageLinks e b não tiver, a deve vir primeiro
     if (a.volumeInfo.imageLinks && !b.volumeInfo.imageLinks) {
@@ -27,6 +31,9 @@ export default function SearchResults({ data }) {
               ? item.volumeInfo.imageLinks.thumbnail.replace("zoom=1", "zoom=1")
               : require("../assets/no-image.png")
           }
+          setCurrentPage={setCurrentPage}
+          setSelectedBook={setSelectedBook}
+          data={item}
         />
       </div>
     );

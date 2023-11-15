@@ -36,6 +36,16 @@ h4 {
   text-align: center;
 }
 
+blockquote{
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 5px solid var(--main-color) !important; /* Just change the color value and that's it*/
+}
+
+.border-test {
+  border: 1px solid red;
+}
+
 .logo-section,
 .helper-section {
   height: 100vh;
@@ -97,6 +107,16 @@ h4 {
   box-shadow: 5px 5px 5px #0000009c;
 }
 
+.book-info {
+  padding: 25px;
+}
+
+.book-viewer {
+  width: 720px;
+  height: 720px;
+  margin: 0 auto;
+}
+
 .section-title {
   font-family: "Anton", sans-serif;
   color: var(--main-color);
@@ -148,6 +168,10 @@ h4 {
 
 .w-100-pc {
   width: 100% !important;
+}
+
+.m-auto {
+  margin: 0 auto !important;
 }
 
 .mt-0 {
