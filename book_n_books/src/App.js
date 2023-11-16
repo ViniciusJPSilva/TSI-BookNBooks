@@ -18,7 +18,7 @@ function App() {
       case PAGES.SEARCH:
         return <Search setCurrentPage={setCurrentPage} setSelectedBook={setSelectedBook} searchResult={searchResult}/>;
       case PAGES.BOOK:
-        return <Book setCurrentPage={setCurrentPage} book={selectedBook}/>;
+        return <Book setCurrentPage={setCurrentPage} book={selectedBook} setSearchResult={setSearchResult}/>;
       default:
         return null;
     };

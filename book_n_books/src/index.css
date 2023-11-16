@@ -103,7 +103,7 @@ blockquote{
   background-color: var(--main-color);
 }
 
-.book-data img {
+.book-data .img-data img {
   box-shadow: 5px 5px 5px #0000009c;
 }
 
@@ -112,9 +112,13 @@ blockquote{
 }
 
 .book-viewer {
-  width: 720px;
   height: 720px;
   margin: 0 auto;
+  display: none;
+}
+
+.related-list {
+  display: none;
 }
 
 .section-title {

@@ -10,7 +10,6 @@ export default function SearchBook({ setCurrentPage, setSelectedBook, title, aut
 
     setCurrentPage("BOOK");
     setSelectedBook(data);
-    
   };
 
   return (
@@ -22,6 +21,15 @@ export default function SearchBook({ setCurrentPage, setSelectedBook, title, aut
         <div className="txt-data white-text">
           <h3 className="">{title}</h3>
           {authorsList}
+
+          {data.volumeInfo.readingModes.text ? (
+            <img src={require("../assets/verified.png")} alt="" width={30}/>
+          ) : (
+            <>
+            <h4>Prévia indisponível :(</h4>
+            </>
+          )}
+          
         </div>
       </a>
     </div>
