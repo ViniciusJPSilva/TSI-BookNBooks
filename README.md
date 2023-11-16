@@ -25,10 +25,18 @@ Book N' Books é um web app (página web responsiva mobile first) de busca e rec
 
 <br/>
 
-<strong>Tecnologias Utilizadas:</strong>
+<strong>Requisitos:</strong>
 - Python versão 3.11
 - Pip versão 23.3.1
 - Node.js versão 20.9.0 LTS
+- Chave e link base (ou endpoint) da API GalaxyAI ou outra API baseada na OpenAI.
+
+<br>
+
+<strong>Tecnologias Utilizadas:</strong>
+- Python
+- Flask
+- Node.js
 - React
 - HTML 5
 - CSS 3
@@ -53,7 +61,7 @@ Uma AI_API foi implementada para gerenciar as requisições à API do OpenAI por
 
 É recomendado que seja criado um ambiente virtual para execução da API, conforme o comando abaixo:
 ```py
-python3 -m venv venv
+python -m venv venv
 ```
 
 <br/>
@@ -72,7 +80,7 @@ pip install -r requirements.txt
 
 <br/>
 
-Crie um arquivo chamado config.py no diretório ai-api com o seguinte conteúdo (os nomes são fictícios):
+Crie um arquivo chamado config.py no diretório ai-api com o seguinte conteúdo (os conteúdos das constantes são fictícios):
 ```py
 API_KEY = 'SUA_CHAVE_DA_API'
 API_BASE = 'https://sua.api.endpoint/'
