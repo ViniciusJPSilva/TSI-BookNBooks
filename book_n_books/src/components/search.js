@@ -5,7 +5,7 @@ import Image from "./image";
 export default function Search({ setCurrentPage, setSelectedBook, searchResult, setSearchResult }) {
   return (
     <main className="search-section section ">
-      <div className="container yellow lighten-5">
+      <div className="container white">
         <div className="row">
           <div className="col w-100-pc breadcrumb-container">
             <nav className="w-100-pc orange darken-1">

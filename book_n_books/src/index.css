@@ -46,6 +46,10 @@ blockquote{
   border: 1px solid red;
 }
 
+.main-color {
+  color: var(--main-color);
+}
+
 .logo-section,
 .helper-section {
   height: 100vh;

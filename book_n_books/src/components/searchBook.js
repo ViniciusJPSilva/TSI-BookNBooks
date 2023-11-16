@@ -26,7 +26,6 @@ export default function SearchBook({ setCurrentPage, setSelectedBook, title, aut
             <img src={require("../assets/verified.png")} alt="" width={30}/>
           ) : (
             <>
-            <h4>Prévia indisponível :(</h4>
             </>
           )}
           

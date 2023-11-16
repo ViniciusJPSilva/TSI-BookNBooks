@@ -136,7 +136,7 @@ export default function Book({ setCurrentPage, book, setSearchResult }) {
 
   return (
     <main className="search-section section ">
-      <div className="container yellow lighten-5">
+      <div className="container white">
         <div className="row">
           <div className="col w-100-pc breadcrumb-container">
             <nav className="w-100-pc orange darken-1">
@@ -227,7 +227,7 @@ export default function Book({ setCurrentPage, book, setSearchResult }) {
                 </div>
               )}
               <div className="container related-list">
-                <h3>Livros Relacionados</h3>
+                <h3 className="main-color">Livros Relacionados</h3>
 
                 <table className="responsive-table">
                   <tbody id="table-body">
