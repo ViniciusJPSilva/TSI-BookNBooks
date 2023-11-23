@@ -1,10 +1,24 @@
-export default function SearchBook({ setCurrentPage, setSelectedBook, title, authors, image, data }) {
+export default function SearchBook({
+  setCurrentPage,
+  setSelectedBook,
+  title,
+  authors,
+  image,
+  data,
+}) {
   let authorsList = [];
 
   if (authors) {
     authorsList = authors.map((item, index) => <h6 key={index}>{item}</h6>);
   }
 
+  /**
+   * Seleciona um livro e atualiza o estado da aplicação para exibir a página do livro selecionado.
+   *
+   * @function
+   * @param {Event} e - O evento associado à chamada da função (geralmente um evento de clique do mouse).
+   * @returns {void}
+   */
   const selectBook = (e) => {
     e.preventDefault();
 
@@ -23,12 +37,10 @@ export default function SearchBook({ setCurrentPage, setSelectedBook, title, aut
           {authorsList}
 
           {data.volumeInfo.readingModes.text ? (
-            <img src={require("../assets/verified.png")} alt="" width={30}/>
+            <img src={require("../assets/verified.png")} alt="" width={30} />
           ) : (
-            <>
-            </>
+            <></>
           )}
-          
         </div>
       </a>
     </div>

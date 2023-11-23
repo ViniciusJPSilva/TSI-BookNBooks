@@ -6,17 +6,27 @@ export default function Header({ setCurrentPage, setSearchResult }) {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
+  /**
+   * Realiza uma pesquisa de livros com base no título fornecido e atualiza o estado da aplicação com os resultados.
+   *
+   * @async
+   * @function
+   * @param {Event} e - O evento associado à chamada da função (geralmente um evento de clique do mouse).
+   * @param {string} title - O título do livro a ser usado na pesquisa.
+   * @returns {void}
+   */
   const handleSearch = async (e) => {
     e.preventDefault();
 
     try {
-
       // Inicia o indicador de carregamento
       setLoading(true);
 
-      document.getElementById('bookSearch').blur();
+      document.getElementById("bookSearch").blur();
 
-      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&langRestrict=pt-BR`);
+      const response = await axios.get(
+        `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&langRestrict=pt-BR`
+      );
       const response_data = await response.data;
 
       await new Promise((resolve) => setTimeout(resolve, 3200));
@@ -32,7 +42,6 @@ export default function Header({ setCurrentPage, setSearchResult }) {
       setLoading(false);
 
       setCurrentPage("SEARCH");
-
     }
   };
 

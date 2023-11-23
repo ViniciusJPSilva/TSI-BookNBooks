@@ -2,6 +2,14 @@ import React, { useEffect } from "react";
 import M from "materialize-css";
 
 export default function LoadingModal({ isOpen }) {
+  /**
+   * Efeito colateral React que controla o comportamento do modal de carregamento.
+   *
+   * @function
+   * @effect
+   * @param {boolean} isOpen - Um valor booleano que indica se o modal deve ser aberto.
+   * @returns {void}
+   */
   useEffect(() => {
     let modalInstance;
 

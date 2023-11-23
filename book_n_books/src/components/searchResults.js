@@ -5,6 +5,13 @@ export default function SearchResults({
   setSelectedBook,
   data,
 }) {
+  /**
+   * Ordena os dados dos itens com base na presença de imageLinks na propriedade volumeInfo.
+   *
+   * @function
+   * @param {Object[]} data - Um array de objetos representando itens de dados.
+   * @returns {Object[]} Um novo array ordenado com base na presença de imageLinks.
+   */
   const sortedData = data.items.sort((a, b) => {
     // Se a tiver imageLinks e b não tiver, a deve vir primeiro
     if (a.volumeInfo.imageLinks && !b.volumeInfo.imageLinks) {
