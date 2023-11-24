@@ -5,6 +5,12 @@ import LoadingModal from "./loadingModal";
 export default function Book({ setCurrentPage, book, setSearchResult }) {
   const [loading, setLoading] = useState(false);
 
+  const headers = {
+    "Content-Type": "application/json",
+  };
+
+  const API_URL = "http://127.0.0.1:15000";
+
   let authorsList = "";
 
   if (book.volumeInfo.authors) {
@@ -21,8 +27,15 @@ export default function Book({ setCurrentPage, book, setSearchResult }) {
    */
   const checkApiAvailability = async () => {
     try {
-      const response = await axios.get("http://localhost:15000/");
-      const responseData = response.data;
+      let responseData;
+
+      await axios
+        .post(API_URL, {
+          headers: headers,
+        })
+        .then(function (response) {
+          responseData = response.data;
+        });
 
       if (
         responseData.status === 200 &&
@@ -68,15 +81,28 @@ export default function Book({ setCurrentPage, book, setSearchResult }) {
 
     while (attempts < maxAttempts && !success) {
       try {
-        const response = await axios.get(
-          `http://127.0.0.1:15000/ai/query/related-books/${book.volumeInfo.title}`
-        );
-        const response_data = response.data;
+        let responseData;
 
-        // Simula um atraso de 3200 milissegundos
-        await new Promise((resolve) => setTimeout(resolve, 3200));
+        const postData = {
+          title: book.volumeInfo.title,
+        };
 
-        populateTable(response_data.related);
+        await axios
+          .post(
+            `${API_URL}/ai/query/related-books`,
+            postData,
+            {
+              headers: headers,
+            }
+          )
+          .then(function (response) {
+            responseData = response.data;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+
+        populateTable(responseData.related);
 
         success = true; // Indica que a requisição foi bem-sucedida
       } catch (error) {
